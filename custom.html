@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syela Cakes | Custom Cake</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Syela Cakes home">
+          <span class="brand-mark" aria-hidden="true">SC</span>
+          <span class="brand-text">
+            <span class="brand-name">Syela Cakes</span>
+            <span class="brand-tag">Custom Cake</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="order.html">Order</a>
+          <a class="nav-link active" href="custom.html">Custom Cake</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-ghost" href="menu.html">Browse menu</a>
+          <button class="icon-btn" type="button" data-cart-open aria-label="Open order summary">
+            <span class="icon-badge" data-cart-count>0</span>
+            <span class="icon" aria-hidden="true">🧾</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Request a custom cake</h1>
+          <p class="muted">
+            If your preferred cake isn’t on our list, fill this form. We’ll use your details to plan the design and quote.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid-2">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Inspiration</h2>
+            </div>
+            <div class="masonry">
+              <figure class="photo-card tall">
+                <img
+                  src="https://images.unsplash.com/photo-1542826438-bd32f43f3f3e?auto=format&fit=crop&w=1200&q=75"
+                  alt="Decorated celebration cake with flowers"
+                  loading="lazy"
+                />
+                <figcaption>Elegant celebration style</figcaption>
+              </figure>
+              <figure class="photo-card">
+                <img
+                  src="https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?auto=format&fit=crop&w=1200&q=75"
+                  alt="Slice of red velvet cake with cream cheese frosting"
+                  loading="lazy"
+                />
+                <figcaption>Classic red velvet</figcaption>
+              </figure>
+              <figure class="photo-card">
+                <img
+                  src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1200&q=75"
+                  alt="Fruit-topped cake with fresh berries"
+                  loading="lazy"
+                />
+                <figcaption>Fresh fruit topping</figcaption>
+              </figure>
+              <figure class="photo-card">
+                <img
+                  src="https://images.unsplash.com/photo-1615837197154-2e801f4bd294?auto=format&fit=crop&w=1200&q=75"
+                  alt="Chocolate drip cake with layered frosting"
+                  loading="lazy"
+                />
+                <figcaption>Chocolate drip</figcaption>
+              </figure>
+            </div>
+            <div class="tiny muted">
+              Tip: In your description, include theme colors, event type, and any wording you want on the cake.
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Cake description form</h2>
+            </div>
+
+            <form class="form" data-custom-form>
+              <div class="row-2">
+                <label class="field">
+                  <span class="field-label">Full name</span>
+                  <input name="name" autocomplete="name" required placeholder="Your name" />
+                </label>
+                <label class="field">
+                  <span class="field-label">Phone</span>
+                  <input name="phone" inputmode="tel" required placeholder="e.g. 0300111661" />
+                </label>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Cake type (if you know it)</span>
+                <input name="cakeType" placeholder="e.g. Butterscotch, Black forest, Coconut…" />
+              </label>
+
+              <div class="row-2">
+                <label class="field">
+                  <span class="field-label">Occasion</span>
+                  <select name="occasion">
+                    <option>Birthday</option>
+                    <option>Wedding</option>
+                    <option>Anniversary</option>
+                    <option>Graduation</option>
+                    <option>Baby shower</option>
+                    <option>Corporate / Event</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span class="field-label">Servings (approx.)</span>
+                  <select name="servings">
+                    <option value="10-15">10–15</option>
+                    <option value="20-25">20–25</option>
+                    <option value="30-40">30–40</option>
+                    <option value="50+">50+</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="row-2">
+                <label class="field">
+                  <span class="field-label">Main colors</span>
+                  <input name="colors" placeholder="e.g. White & gold, pink, pastel…" />
+                </label>
+                <label class="field">
+                  <span class="field-label">Budget range</span>
+                  <select name="budget" required>
+                    <option value="300-500">300–500 GH₵</option>
+                    <option value="500-800">500–800 GH₵</option>
+                    <option value="800-1200">800–1200 GH₵</option>
+                    <option value="1200-1500">1200–1500 GH₵</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Preferred date</span>
+                <input type="date" name="date" />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Full description</span>
+                <textarea
+                  name="description"
+                  rows="6"
+                  required
+                  placeholder="Describe the cake you want: flavor, size, frosting, toppings, decorations, message text, reference ideas…"
+                ></textarea>
+              </label>
+
+              <div class="form-actions">
+                <button class="btn" type="submit">Generate request summary</button>
+                <button class="btn btn-ghost" type="button" data-fill-sample>Fill sample</button>
+              </div>
+
+              <div class="result" data-custom-result hidden>
+                <div class="result-head">
+                  <strong>Request summary</strong>
+                  <button class="btn btn-ghost btn-sm" type="button" data-copy-custom>Copy</button>
+                </div>
+                <textarea readonly rows="12" data-custom-summary></textarea>
+                <div class="tiny muted">
+                  Send to: <strong>0300111661</strong> or <strong>syelacakes@gmail.com</strong>.
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">Syela Cakes</div>
+          <div class="tiny muted">Location: Osu-Accra • Contact: 0300111661 • Email: syelacakes@gmail.com</div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Order</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <aside class="drawer" data-cart-drawer aria-hidden="true">
+      <div class="drawer-backdrop" data-cart-close></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Order summary">
+        <div class="drawer-head">
+          <h2>Order summary</h2>
+          <button class="icon-btn" type="button" data-cart-close aria-label="Close order summary">✕</button>
+        </div>
+        <div class="drawer-body">
+          <div data-cart-items></div>
+          <div class="cart-totals">
+            <div class="row">
+              <span class="muted">Estimated total</span>
+              <strong data-cart-total>0</strong>
+            </div>
+          </div>
+        </div>
+        <div class="drawer-foot">
+          <a class="btn btn-ghost" href="menu.html">Add more</a>
+          <a class="btn" href="order.html">Checkout</a>
+        </div>
+      </div>
+    </aside>
+  </body>
+</html>

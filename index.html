@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syela Cakes | Home</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Syela Cakes home">
+          <span class="brand-mark" aria-hidden="true">SC</span>
+          <span class="brand-text">
+            <span class="brand-name">Syela Cakes</span>
+            <span class="brand-tag">Fresh • Beautiful • Delicious</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="order.html">Order</a>
+          <a class="nav-link" href="custom.html">Custom Cake</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-ghost" href="order.html">Order now</a>
+          <button class="icon-btn" type="button" data-cart-open aria-label="Open order summary">
+            <span class="icon-badge" data-cart-count>0</span>
+            <span class="icon" aria-hidden="true">🧾</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="pill">Osu • Accra</p>
+            <h1>
+              Cakes that look <span class="accent">as good</span> as they taste.
+            </h1>
+            <p class="lead">
+              Choose from our classic favorites or request a fully custom design. Prices range from
+              <strong>300 GH₵</strong> to <strong>1500 GH₵</strong>.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn" href="menu.html">Browse cakes</a>
+              <a class="btn btn-ghost" href="custom.html">Request custom cake</a>
+            </div>
+            <div class="trust">
+              <div class="trust-item">
+                <span class="trust-title">Pickup</span>
+                <span class="trust-sub">Osu-Accra</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-title">Contact</span>
+                <span class="trust-sub">0300111661</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-title">Email</span>
+                <span class="trust-sub">syelacakes@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Featured cakes">
+            <div class="hero-grid">
+              <figure class="photo-card">
+                <img
+                  src="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=1200&q=75"
+                  alt="Elegant chocolate cake with glossy ganache"
+                  loading="eager"
+                />
+                <figcaption>Chocolate cake</figcaption>
+              </figure>
+              <figure class="photo-card">
+                <img
+                  src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=1200&q=75"
+                  alt="Creamy cheesecake slice topped with berries"
+                  loading="eager"
+                />
+                <figcaption>Cheese cake</figcaption>
+              </figure>
+              <figure class="photo-card">
+                <img
+                  src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=1200&q=75"
+                  alt="Cupcakes with fluffy frosting and sprinkles"
+                  loading="eager"
+                />
+                <figcaption>Cup cakes</figcaption>
+              </figure>
+              <figure class="photo-card">
+                <img
+                  src="https://images.unsplash.com/photo-1562440499-64c9a111f713?auto=format&fit=crop&w=1200&q=75"
+                  alt="Muffins with golden tops on a tray"
+                  loading="eager"
+                />
+                <figcaption>Muffins</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Popular picks</h2>
+            <p class="muted">Tap a cake to add it to your order.</p>
+          </div>
+
+          <div class="cards" data-featured-grid>
+            <!-- populated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft">
+        <div class="container">
+          <div class="split">
+            <div>
+              <h2>Not on the list?</h2>
+              <p class="muted">
+                No problem. Tell us what you want (flavor, size, theme, colors, message) and we’ll get back to you.
+              </p>
+              <div class="inline-actions">
+                <a class="btn" href="custom.html">Custom cake form</a>
+                <a class="btn btn-ghost" href="order.html">Quick order</a>
+              </div>
+            </div>
+            <div class="info-card">
+              <h3>Contact</h3>
+              <ul class="info-list">
+                <li><strong>Location:</strong> Osu-Accra</li>
+                <li><strong>Contact:</strong> 0300111661</li>
+                <li><strong>Email:</strong> syelacakes@gmail.com</li>
+              </ul>
+              <p class="tiny muted">
+                Submitting an order will create a summary you can copy and send via call or email.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">Syela Cakes</div>
+          <div class="tiny muted">Location: Osu-Accra • Contact: 0300111661 • Email: syelacakes@gmail.com</div>
+        </div>
+        <div class="footer-links">
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Order</a>
+          <a href="custom.html">Custom cake</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <aside class="drawer" data-cart-drawer aria-hidden="true">
+      <div class="drawer-backdrop" data-cart-close></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Order summary">
+        <div class="drawer-head">
+          <h2>Order summary</h2>
+          <button class="icon-btn" type="button" data-cart-close aria-label="Close order summary">✕</button>
+        </div>
+        <div class="drawer-body">
+          <div data-cart-items></div>
+          <div class="cart-totals">
+            <div class="row">
+              <span class="muted">Estimated total</span>
+              <strong data-cart-total>0</strong>
+            </div>
+            <p class="tiny muted">
+              Final total may vary depending on customization, size, and decoration details.
+            </p>
+          </div>
+        </div>
+        <div class="drawer-foot">
+          <a class="btn btn-ghost" href="menu.html">Add more</a>
+          <a class="btn" href="order.html">Checkout</a>
+        </div>
+      </div>
+    </aside>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syela Cakes | Order</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Syela Cakes home">
+          <span class="brand-mark" aria-hidden="true">SC</span>
+          <span class="brand-text">
+            <span class="brand-name">Syela Cakes</span>
+            <span class="brand-tag">Order</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link active" href="order.html">Order</a>
+          <a class="nav-link" href="custom.html">Custom Cake</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" type="button" data-cart-open aria-label="Open order summary">
+            <span class="icon-badge" data-cart-count>0</span>
+            <span class="icon" aria-hidden="true">🧾</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Checkout</h1>
+          <p class="muted">
+            Review your selected items, add details, then copy your order summary to send via call or email.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid-2">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Your items</h2>
+              <a class="link" href="menu.html">Add more</a>
+            </div>
+            <div data-checkout-items></div>
+            <div class="cart-totals">
+              <div class="row">
+                <span class="muted">Estimated total</span>
+                <strong data-checkout-total>0</strong>
+              </div>
+              <p class="tiny muted">
+                Final pricing may change if you request bigger size, extra decorations, or special themes.
+              </p>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Your details</h2>
+            </div>
+
+            <form class="form" data-checkout-form>
+              <div class="row-2">
+                <label class="field">
+                  <span class="field-label">Full name</span>
+                  <input name="name" autocomplete="name" required placeholder="Your name" />
+                </label>
+                <label class="field">
+                  <span class="field-label">Phone</span>
+                  <input name="phone" inputmode="tel" required placeholder="e.g. 0300111661" />
+                </label>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Delivery method</span>
+                <select name="deliveryMethod" required>
+                  <option value="Pickup (Osu-Accra)">Pickup (Osu-Accra)</option>
+                  <option value="Delivery (Accra)">Delivery (Accra)</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span class="field-label">Delivery address (if delivery)</span>
+                <input name="address" placeholder="Street / area / landmark" />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Preferred date</span>
+                <input type="date" name="date" />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Extra description / instructions</span>
+                <textarea
+                  name="notes"
+                  rows="4"
+                  placeholder="Example: “Write Happy Birthday Ama”, pastel colors, extra strawberries, less sugar…"
+                ></textarea>
+              </label>
+
+              <div class="form-actions">
+                <button class="btn btn-ghost" type="button" data-clear-cart>Clear cart</button>
+                <button class="btn" type="submit">Generate order summary</button>
+              </div>
+
+              <div class="result" data-order-result hidden>
+                <div class="result-head">
+                  <strong>Order summary</strong>
+                  <button class="btn btn-ghost btn-sm" type="button" data-copy-summary>Copy</button>
+                </div>
+                <textarea readonly rows="10" data-order-summary></textarea>
+                <div class="tiny muted">
+                  Send to: <strong>0300111661</strong> or <strong>syelacakes@gmail.com</strong>.
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">Syela Cakes</div>
+          <div class="tiny muted">Location: Osu-Accra • Contact: 0300111661 • Email: syelacakes@gmail.com</div>
+        </div>
+        <div class="footer-links">
+          <a href="menu.html">Menu</a>
+          <a href="custom.html">Custom cake</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <aside class="drawer" data-cart-drawer aria-hidden="true">
+      <div class="drawer-backdrop" data-cart-close></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Order summary">
+        <div class="drawer-head">
+          <h2>Order summary</h2>
+          <button class="icon-btn" type="button" data-cart-close aria-label="Close order summary">✕</button>
+        </div>
+        <div class="drawer-body">
+          <div data-cart-items></div>
+          <div class="cart-totals">
+            <div class="row">
+              <span class="muted">Estimated total</span>
+              <strong data-cart-total>0</strong>
+            </div>
+          </div>
+        </div>
+        <div class="drawer-foot">
+          <a class="btn btn-ghost" href="menu.html">Add more</a>
+          <a class="btn" href="order.html">Checkout</a>
+        </div>
+      </div>
+    </aside>
+  </body>
+</html>

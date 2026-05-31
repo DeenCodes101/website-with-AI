@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syela Cakes | Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Syela Cakes home">
+          <span class="brand-mark" aria-hidden="true">SC</span>
+          <span class="brand-text">
+            <span class="brand-name">Syela Cakes</span>
+            <span class="brand-tag">Contact</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="order.html">Order</a>
+          <a class="nav-link" href="custom.html">Custom Cake</a>
+          <a class="nav-link active" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-ghost" href="order.html">Order now</a>
+          <button class="icon-btn" type="button" data-cart-open aria-label="Open order summary">
+            <span class="icon-badge" data-cart-count>0</span>
+            <span class="icon" aria-hidden="true">🧾</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Contact Syela Cakes</h1>
+          <p class="muted">We’re based in Osu-Accra. Reach us by phone or email.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid-2">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Contact details</h2>
+            </div>
+            <ul class="info-list big">
+              <li><strong>Location:</strong> Osu-Accra</li>
+              <li><strong>Contact:</strong> 0300111661</li>
+              <li><strong>Email:</strong> syelacakes@gmail.com</li>
+            </ul>
+
+            <div class="callouts">
+              <div class="callout">
+                <strong>Quick ordering</strong>
+                <div class="muted">Pick cakes from the menu and generate a summary.</div>
+                <a class="link" href="menu.html">Go to menu</a>
+              </div>
+              <div class="callout">
+                <strong>Custom cakes</strong>
+                <div class="muted">Tell us what you want if it’s not on the list.</div>
+                <a class="link" href="custom.html">Custom cake form</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Send a message</h2>
+            </div>
+
+            <form class="form" data-contact-form>
+              <div class="row-2">
+                <label class="field">
+                  <span class="field-label">Name</span>
+                  <input name="name" autocomplete="name" required placeholder="Your name" />
+                </label>
+                <label class="field">
+                  <span class="field-label">Email</span>
+                  <input name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+                </label>
+              </div>
+              <label class="field">
+                <span class="field-label">Subject</span>
+                <input name="subject" required placeholder="Order / Custom cake / Question" />
+              </label>
+              <label class="field">
+                <span class="field-label">Message</span>
+                <textarea name="message" rows="6" required placeholder="Type your message…"></textarea>
+              </label>
+              <div class="form-actions">
+                <button class="btn" type="submit">Generate message summary</button>
+                <button class="btn btn-ghost" type="button" data-fill-contact>Fill sample</button>
+              </div>
+              <div class="result" data-contact-result hidden>
+                <div class="result-head">
+                  <strong>Message summary</strong>
+                  <button class="btn btn-ghost btn-sm" type="button" data-copy-contact>Copy</button>
+                </div>
+                <textarea readonly rows="10" data-contact-summary></textarea>
+                <div class="tiny muted">Email: <strong>syelacakes@gmail.com</strong> • Phone: <strong>0300111661</strong></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">Syela Cakes</div>
+          <div class="tiny muted">Location: Osu-Accra • Contact: 0300111661 • Email: syelacakes@gmail.com</div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Order</a>
+          <a href="custom.html">Custom cake</a>
+        </div>
+      </div>
+    </footer>
+
+    <aside class="drawer" data-cart-drawer aria-hidden="true">
+      <div class="drawer-backdrop" data-cart-close></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Order summary">
+        <div class="drawer-head">
+          <h2>Order summary</h2>
+          <button class="icon-btn" type="button" data-cart-close aria-label="Close order summary">✕</button>
+        </div>
+        <div class="drawer-body">
+          <div data-cart-items></div>
+          <div class="cart-totals">
+            <div class="row">
+              <span class="muted">Estimated total</span>
+              <strong data-cart-total>0</strong>
+            </div>
+          </div>
+        </div>
+        <div class="drawer-foot">
+          <a class="btn btn-ghost" href="menu.html">Add more</a>
+          <a class="btn" href="order.html">Checkout</a>
+        </div>
+      </div>
+    </aside>
+  </body>
+</html>
